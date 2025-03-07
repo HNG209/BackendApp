@@ -1,6 +1,7 @@
 package com.demo.backendapp.dto.request;
 
 import com.demo.backendapp.entity.Role;
+import com.demo.backendapp.validator.Dob;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -20,6 +21,8 @@ public class UserCreationRequest {
     String password;
     String firstName;
     String lastName;
+
+    @Dob
     LocalDate dob;
 
     List<String> roles;

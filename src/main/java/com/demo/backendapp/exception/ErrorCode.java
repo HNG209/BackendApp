@@ -16,7 +16,8 @@ public enum ErrorCode {
     KEY_INVALID(3002, "invalid enum key", HttpStatus.INTERNAL_SERVER_ERROR),
     BODY_NOT_SPECIFIED(3003, "body not specified", HttpStatus.BAD_REQUEST),
     UNAUTHENTICATED(4004, "unauthenticated", HttpStatus.UNAUTHORIZED),
-    UNAUTHORIZED(4003, "access denied", HttpStatus.FORBIDDEN)
+    UNAUTHORIZED(4003, "access denied", HttpStatus.FORBIDDEN),
+    INVALID_DOB(3003, "invalid date of birth", HttpStatus.BAD_REQUEST)
     ;
 
     private final int code;
