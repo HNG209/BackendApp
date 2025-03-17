@@ -1,6 +1,7 @@
 package com.demo.backendapp.controller;
 
 import com.demo.backendapp.dto.request.AuthenticationRequest;
+import com.demo.backendapp.dto.request.LogoutRequest;
 import com.demo.backendapp.dto.request.TokenValidationRequest;
 import com.demo.backendapp.dto.response.ApiResponse;
 import com.demo.backendapp.dto.response.AuthenticationResponse;
@@ -28,6 +29,15 @@ public class AuthenticationController {
 
         return ApiResponse.<AuthenticationResponse>builder()
                 .result(r)
+                .build();
+    }
+
+    @PostMapping("/logout")
+    public ApiResponse<Void> logout(@RequestBody LogoutRequest logoutRequest) throws ParseException, JOSEException {
+        authenticationService.logout(logoutRequest);
+
+        return ApiResponse.<Void>builder()
+                .message("ok")
                 .build();
     }
 

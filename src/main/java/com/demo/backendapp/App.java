@@ -7,10 +7,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BackendappApplication implements CommandLineRunner {
+public class App implements CommandLineRunner {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BackendappApplication.class, args);
+		SpringApplication.run(App.class, args);
 	}
 
 	@Autowired
